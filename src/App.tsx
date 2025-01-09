@@ -30,7 +30,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <Alert message="mensagem de teste" type="success" />
+      <Alert message="mensagem de teste" type="success" duration={3} />
     </>
   );
 }
