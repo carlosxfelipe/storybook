@@ -60,9 +60,10 @@ src/
 ├── components/       # Componentes reutilizáveis
 │   ├── index.ts      # Exporta todos os componentes
 │   └── Alert/        # Componente Alert
-│       ├── Alert.tsx
-│       ├── Alert.css
-│       ├── Alert.stories.tsx
+│       ├── Alert.tsx          # Variante para React (web)
+│       ├── Alert.native.tsx   # Variante para React Native
+│       ├── Alert.css          # Estilos para web
+│       ├── Alert.stories.tsx  # Histórias para Storybook (web)
 ├── App.tsx           # Componente principal da aplicação
 ├── main.tsx          # Ponto de entrada do aplicativo
 └── assets/           # Recursos estáticos (imagens, etc.)
