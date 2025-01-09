@@ -1,6 +1,6 @@
 # My Storybook Project
 
-Este projeto é uma aplicação React configurada com Vite e Storybook. Ele contém componentes reutilizáveis organizados em uma estrutura modular.
+Este projeto é uma aplicação React configurada com Vite e Storybook, desenvolvida como parte de um projeto de laboratório para experimentos com a ferramenta Storybook. Ele contém componentes reutilizáveis organizados em uma estrutura modular.
 
 ## Pré-requisitos
 
@@ -60,10 +60,9 @@ src/
 ├── components/       # Componentes reutilizáveis
 │   ├── index.ts      # Exporta todos os componentes
 │   └── Alert/        # Componente Alert
-│       ├── Alert.tsx          # Variante para React (web)
-│       ├── Alert.native.tsx   # Variante para React Native
-│       ├── Alert.css          # Estilos para web
-│       ├── Alert.stories.tsx  # Histórias para Storybook (web)
+│       ├── Alert.tsx
+│       ├── Alert.css
+│       ├── Alert.stories.tsx
 ├── App.tsx           # Componente principal da aplicação
 ├── main.tsx          # Ponto de entrada do aplicativo
 └── assets/           # Recursos estáticos (imagens, etc.)
