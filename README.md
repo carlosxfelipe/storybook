@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# My Storybook Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação React configurada com Vite e Storybook. Ele contém componentes reutilizáveis organizados em uma estrutura modular.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Certifique-se de ter instalado:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [npm](https://www.npmjs.com/) (geralmente incluído com o Node.js)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalação
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone este repositório:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+   ```bash
+   git clone https://github.com/seu-usuario/my-storybook-project.git
+   cd my-storybook-project
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+## Scripts Disponíveis
+
+### `npm run dev`
+
+Inicia o servidor de desenvolvimento com Vite.
+
+- Acesse o projeto em [http://localhost:5173](http://localhost:5173).
+
+### `npm run build`
+
+Gera o build de produção do projeto.
+
+- Os arquivos serão gerados na pasta `dist/`.
+
+### `npm run storybook`
+
+Inicia o Storybook para visualizar e testar os componentes.
+
+- Acesse o Storybook em [http://localhost:6006](http://localhost:6006).
+
+### `npm run build-storybook`
+
+Gera o build estático do Storybook.
+
+- Os arquivos serão gerados na pasta `storybook-static/`.
+
+### `npm run lint`
+
+Executa o ESLint para identificar problemas no código.
+
+## Estrutura de Diretórios
+
+```
+src/
+├── components/       # Componentes reutilizáveis
+│   ├── index.ts      # Exporta todos os componentes
+│   └── Alert/        # Componente Alert
+│       ├── Alert.tsx
+│       ├── Alert.css
+│       ├── Alert.stories.tsx
+├── App.tsx           # Componente principal da aplicação
+├── main.tsx          # Ponto de entrada do aplicativo
+└── assets/           # Recursos estáticos (imagens, etc.)
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Observações
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Certifique-se de ajustar os caminhos absolutos no `tsconfig.json` se alterar a estrutura do projeto.
+- Para dúvidas ou problemas, abra uma [issue](https://github.com/seu-usuario/my-storybook-project/issues) no repositório.
